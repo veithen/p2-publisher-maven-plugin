@@ -113,7 +113,7 @@
         <dependency>
             <groupId>com.github.veithen.cosmos</groupId>
             <artifactId>cosmos-equinox</artifactId>
-            <version>0.4.0-SNAPSHOT</version>
+            <version>0.4.0</version>
         </dependency>
         <dependency>
             <groupId>org.eclipse.platform</groupId>
