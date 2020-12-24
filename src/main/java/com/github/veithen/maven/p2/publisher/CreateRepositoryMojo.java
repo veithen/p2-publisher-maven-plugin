@@ -7,9 +7,9 @@
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
- * 
+ *
  *      http://www.apache.org/licenses/LICENSE-2.0
- * 
+ *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -55,34 +55,31 @@ import com.github.veithen.cosmos.osgi.runtime.CosmosRuntime;
 import com.github.veithen.maven.shared.artifactset.ArtifactSet;
 import com.github.veithen.maven.shared.artifactset.ArtifactSetResolver;
 
-@Mojo(name="create-repository", requiresDependencyResolution=ResolutionScope.TEST)
+@Mojo(name = "create-repository", requiresDependencyResolution = ResolutionScope.TEST)
 public class CreateRepositoryMojo extends AbstractMojo {
-    @Parameter(property="project", readonly=true, required=true)
+    @Parameter(property = "project", readonly = true, required = true)
     private MavenProject project;
-    
-    @Parameter(property="session", readonly=true, required=true)
+
+    @Parameter(property = "session", readonly = true, required = true)
     private MavenSession session;
-    
-    @Parameter(required=true)
+
+    @Parameter(required = true)
     private ArtifactSet artifactSet;
 
-    @Parameter
-    private Repository[] repositories;
+    @Parameter private Repository[] repositories;
 
-    @Parameter(defaultValue="${project.build.directory}/p2-repository", required=true)
+    @Parameter(defaultValue = "${project.build.directory}/p2-repository", required = true)
     private File outputDirectory;
 
-    @Parameter(defaultValue="${project.build.directory}/p2-agent", required=true)
+    @Parameter(defaultValue = "${project.build.directory}/p2-agent", required = true)
     private File agentLocation;
 
-    @Parameter
-    private File[] bundles;
+    @Parameter private File[] bundles;
 
-    @Parameter(defaultValue="false")
+    @Parameter(defaultValue = "false")
     private boolean skip;
 
-    @Component
-    private ArtifactSetResolver artifactSetResolver;
+    @Component private ArtifactSetResolver artifactSetResolver;
 
     @Override
     public void execute() throws MojoExecutionException, MojoFailureException {
@@ -93,14 +90,33 @@ public class CreateRepositoryMojo extends AbstractMojo {
         }
 
         try {
-            List<Artifact> artifacts = artifactSetResolver.resolveArtifactSet(project, session, artifactSet, repositories);
+            List<Artifact> artifacts =
+                    artifactSetResolver.resolveArtifactSet(
+                            project, session, artifactSet, repositories);
             URI repoURI = outputDirectory.toURI();
-            IProvisioningAgent agent = CosmosRuntime.getInstance().getService(IProvisioningAgentProvider.class).createAgent(agentLocation.toURI());
+            IProvisioningAgent agent =
+                    CosmosRuntime.getInstance()
+                            .getService(IProvisioningAgentProvider.class)
+                            .createAgent(agentLocation.toURI());
             try {
-                IArtifactRepositoryManager artifactRepositoryManager = (IArtifactRepositoryManager)agent.getService(IArtifactRepositoryManager.SERVICE_NAME);
-                IMetadataRepositoryManager metadataRepositoryManager = (IMetadataRepositoryManager)agent.getService(IMetadataRepositoryManager.SERVICE_NAME);
-                IArtifactRepository artifactRepository = artifactRepositoryManager.createRepository(repoURI, "Artifact Repository", IArtifactRepositoryManager.TYPE_SIMPLE_REPOSITORY, Collections.<String,String>emptyMap());
-                IMetadataRepository metadataRepository = metadataRepositoryManager.createRepository(repoURI, "Metadata Repository", IMetadataRepositoryManager.TYPE_SIMPLE_REPOSITORY, Collections.<String,String>emptyMap());
+                IArtifactRepositoryManager artifactRepositoryManager =
+                        (IArtifactRepositoryManager)
+                                agent.getService(IArtifactRepositoryManager.SERVICE_NAME);
+                IMetadataRepositoryManager metadataRepositoryManager =
+                        (IMetadataRepositoryManager)
+                                agent.getService(IMetadataRepositoryManager.SERVICE_NAME);
+                IArtifactRepository artifactRepository =
+                        artifactRepositoryManager.createRepository(
+                                repoURI,
+                                "Artifact Repository",
+                                IArtifactRepositoryManager.TYPE_SIMPLE_REPOSITORY,
+                                Collections.<String, String>emptyMap());
+                IMetadataRepository metadataRepository =
+                        metadataRepositoryManager.createRepository(
+                                repoURI,
+                                "Metadata Repository",
+                                IMetadataRepositoryManager.TYPE_SIMPLE_REPOSITORY,
+                                Collections.<String, String>emptyMap());
                 PublisherInfo publisherInfo = new PublisherInfo();
                 publisherInfo.setArtifactRepository(artifactRepository);
                 publisherInfo.setMetadataRepository(metadataRepository);
@@ -113,9 +129,12 @@ public class CreateRepositoryMojo extends AbstractMojo {
                 if (bundles != null) {
                     locations.addAll(Arrays.asList(bundles));
                 }
-                IStatus status = publisher.publish(
-                        new IPublisherAction[] { new BundlesAction(locations.toArray(new File[locations.size()])) },
-                        null);
+                IStatus status =
+                        publisher.publish(
+                                new IPublisherAction[] {
+                                    new BundlesAction(locations.toArray(new File[locations.size()]))
+                                },
+                                null);
                 if (!status.isOK()) {
                     throw new MojoExecutionException("Publishing failed: " + status.getMessage());
                 }
