@@ -51,7 +51,7 @@
 
     <properties>
         <github.repository>p2-publisher-maven-plugin</github.repository>
-        <maven.version>3.6.3</maven.version>
+        <maven.version>3.8.1</maven.version>
     </properties>
 
     <dependencyManagement>
