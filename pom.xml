@@ -59,7 +59,7 @@
             <dependency>
                 <groupId>org.eclipse.platform</groupId>
                 <artifactId>org.eclipse.osgi</artifactId>
-                <version>3.16.200</version>
+                <version>3.16.300</version>
             </dependency>
             <dependency>
                 <groupId>org.eclipse.platform</groupId>
@@ -119,7 +119,7 @@
         <dependency>
             <groupId>org.eclipse.platform</groupId>
             <artifactId>org.eclipse.osgi.compatibility.state</artifactId>
-            <version>1.2.300</version>
+            <version>1.2.400</version>
         </dependency>
         <dependency>
             <groupId>org.eclipse.platform</groupId>
