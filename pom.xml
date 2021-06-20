@@ -24,12 +24,12 @@
     <parent>
         <groupId>com.github.veithen</groupId>
         <artifactId>parent</artifactId>
-        <version>31</version>
+        <version>32-SNAPSHOT</version>
     </parent>
 
     <groupId>com.github.veithen.maven</groupId>
     <artifactId>p2-publisher-maven-plugin</artifactId>
-    <version>0.4.1-SNAPSHOT</version>
+    <version>0.5.0-SNAPSHOT</version>
     <packaging>maven-plugin</packaging>
 
     <url>https://github.com/veithen/p2-publisher-maven-plugin</url>
@@ -52,6 +52,7 @@
     <properties>
         <github.repository>p2-publisher-maven-plugin</github.repository>
         <maven.version>3.8.1</maven.version>
+        <javaVersion>11</javaVersion>
     </properties>
 
     <dependencyManagement>

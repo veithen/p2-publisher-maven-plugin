@@ -4,9 +4,6 @@ updates:
     directory: "/"
     schedule:
       interval: "daily"
-    ignore:
-      - dependency-name: "org.eclipse.platform:org.eclipse.equinox.p2.repository"
-        versions: ">= 2.5.0"
   - package-ecosystem: "maven"
     directory: "/src/it/multiple-executions"
     schedule:
