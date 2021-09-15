@@ -70,7 +70,7 @@
             <dependency>
                 <groupId>org.eclipse.platform</groupId>
                 <artifactId>org.eclipse.equinox.registry</artifactId>
-                <version>3.11.0</version>
+                <version>3.10.200</version>
             </dependency>
             <dependency>
                 <groupId>org.eclipse.platform</groupId>
@@ -120,7 +120,7 @@
         <dependency>
             <groupId>org.eclipse.platform</groupId>
             <artifactId>org.eclipse.osgi.compatibility.state</artifactId>
-            <version>1.2.400</version>
+            <version>1.2.500</version>
         </dependency>
         <dependency>
             <groupId>org.eclipse.platform</groupId>
@@ -150,7 +150,7 @@
         <dependency>
             <groupId>org.eclipse.platform</groupId>
             <artifactId>org.eclipse.equinox.p2.publisher.eclipse</artifactId>
-            <version>1.4.1</version>
+            <version>1.4.0</version>
         </dependency>
         <dependency>
             <groupId>org.eclipse.platform</groupId>
