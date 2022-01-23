@@ -24,7 +24,7 @@
     <parent>
         <groupId>com.github.veithen</groupId>
         <artifactId>parent</artifactId>
-        <version>36</version>
+        <version>37</version>
     </parent>
 
     <groupId>com.github.veithen.maven</groupId>
@@ -53,6 +53,7 @@
         <github.repository>p2-publisher-maven-plugin</github.repository>
         <maven.version>3.8.4</maven.version>
         <javaVersion>11</javaVersion>
+        <project.build.outputTimestamp>2022-01-23T11:53:00Z</project.build.outputTimestamp>
     </properties>
 
     <dependencyManagement>
