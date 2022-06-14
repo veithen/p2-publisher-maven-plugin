@@ -61,7 +61,7 @@
             <dependency>
                 <groupId>org.eclipse.platform</groupId>
                 <artifactId>org.eclipse.osgi</artifactId>
-                <version>3.17.200</version>
+                <version>3.18.0</version>
             </dependency>
             <dependency>
                 <groupId>org.eclipse.platform</groupId>
@@ -136,7 +136,7 @@
         <dependency>
             <groupId>org.eclipse.platform</groupId>
             <artifactId>org.eclipse.equinox.p2.artifact.repository</artifactId>
-            <version>1.4.400</version>
+            <version>1.4.500</version>
         </dependency>
         <dependency>
             <groupId>org.eclipse.platform</groupId>
@@ -151,7 +151,7 @@
         <dependency>
             <groupId>org.eclipse.platform</groupId>
             <artifactId>org.eclipse.equinox.p2.publisher.eclipse</artifactId>
-            <version>1.4.2</version>
+            <version>1.4.100</version>
         </dependency>
         <dependency>
             <groupId>org.eclipse.platform</groupId>
