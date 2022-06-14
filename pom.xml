@@ -51,7 +51,7 @@
 
     <properties>
         <github.repository>p2-publisher-maven-plugin</github.repository>
-        <maven.version>3.8.5</maven.version>
+        <maven.version>3.8.6</maven.version>
         <javaVersion>11</javaVersion>
         <project.build.outputTimestamp>2022-01-23T11:53:00Z</project.build.outputTimestamp>
     </properties>
@@ -66,7 +66,7 @@
             <dependency>
                 <groupId>org.eclipse.platform</groupId>
                 <artifactId>org.eclipse.equinox.common</artifactId>
-                <version>3.16.0</version>
+                <version>3.16.100</version>
             </dependency>
             <dependency>
                 <groupId>org.eclipse.platform</groupId>
@@ -141,7 +141,7 @@
         <dependency>
             <groupId>org.eclipse.platform</groupId>
             <artifactId>org.eclipse.equinox.p2.metadata.repository</artifactId>
-            <version>1.4.0</version>
+            <version>1.4.100</version>
         </dependency>
         <dependency>
             <groupId>org.eclipse.platform</groupId>
