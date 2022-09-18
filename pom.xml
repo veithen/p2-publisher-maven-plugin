@@ -180,7 +180,7 @@
             <plugin>
                 <groupId>com.github.veithen.maven</groupId>
                 <artifactId>resolver-proxy-maven-plugin</artifactId>
-                <version>0.3.0</version>
+                <version>0.4.0-SNAPSHOT</version>
                 <executions>
                     <execution>
                         <goals>
