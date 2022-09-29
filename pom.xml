@@ -54,7 +54,7 @@
         <maven.version>3.8.6</maven.version>
         <javaVersion>11</javaVersion>
         <project.build.outputTimestamp>2022-01-23T11:53:00Z</project.build.outputTimestamp>
-        <bouncycastle.version>1.71.1</bouncycastle.version>
+        <bouncycastle.version>1.72</bouncycastle.version>
     </properties>
 
     <dependencyManagement>
