@@ -102,7 +102,7 @@
             <dependency>
                 <groupId>org.eclipse.platform</groupId>
                 <artifactId>org.eclipse.core.contenttype</artifactId>
-                <version>3.9.0</version>
+                <version>3.9.100</version>
             </dependency>
             <dependency>
                 <groupId>org.eclipse.platform</groupId>
