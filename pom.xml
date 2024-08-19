@@ -51,7 +51,7 @@
 
     <properties>
         <github.repository>p2-publisher-maven-plugin</github.repository>
-        <maven.version>3.9.8</maven.version>
+        <maven.version>3.9.9</maven.version>
         <javaVersion>17</javaVersion>
         <project.build.outputTimestamp>2022-01-23T11:53:00Z</project.build.outputTimestamp>
         <bouncycastle.version>1.78.1</bouncycastle.version>
