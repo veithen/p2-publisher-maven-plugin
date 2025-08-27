@@ -24,7 +24,7 @@
     <parent>
         <groupId>com.github.veithen</groupId>
         <artifactId>parent</artifactId>
-        <version>54</version>
+        <version>55</version>
     </parent>
 
     <groupId>com.github.veithen.maven</groupId>
@@ -32,6 +32,7 @@
     <version>0.5.1-SNAPSHOT</version>
     <packaging>maven-plugin</packaging>
 
+    <name>p2-publisher-maven-plugin</name>
     <url>https://github.com/veithen/p2-publisher-maven-plugin</url>
     <inceptionYear>2018</inceptionYear>
     <licenses>
