@@ -200,7 +200,7 @@
         <dependency>
             <groupId>org.eclipse.platform</groupId>
             <artifactId>org.eclipse.equinox.p2.publisher.eclipse</artifactId>
-            <version>1.6.600</version>
+            <version>1.6.700</version>
         </dependency>
         <dependency>
             <groupId>org.eclipse.platform</groupId>
